@@ -1,0 +1,22 @@
+{
+    "name": "husseinmirzaki/wordpress-git-helper",
+    "description": "This plugin could beused to update your wordpress themes or even themes (not working yet !!!)",
+    "type": "project",
+    "require": {
+        "knplabs/github-api": "^2.10",
+        "php-http/guzzle6-adapter": "^1.1"
+    },
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hussein Mirzaki",
+            "email": "husseinmirzaki@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
