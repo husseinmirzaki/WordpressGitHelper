@@ -10,10 +10,6 @@ trait ShowRepositoriesPart
 
     public function showRepositories()
     {
-        print_r($this->get('/users/' . $this->currentUser['login'] . '/repos')->);
-        exit();
-        if ($this->checkForPassOrToken())
-            return;
 
         ?>
         <div class="bootstraped" style="width: 100%">

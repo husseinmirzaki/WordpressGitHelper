@@ -43,20 +43,23 @@ class Mirzaki_Admin
         $this->plugin_name = $plugin_name;
         $this->version = $version;
         $this->options = get_option(Mirzaki_Admin::$options_name);
-        if ($this->checkForPassOrToken() && $client === 'default') {
-            $this->client = new \Github\Client;
-            if ($this->hasToken()) {
-                $this->client->authenticate($this->getToken(), null, Github\Client::AUTH_HTTP_TOKEN);
-                $this->currentUser = $this->client->currentUser()->show();
-            } elseif ($this->hasUserPass()) {
-                $userPass = $this->getUserPass();
-                $this->client->authenticate($userPass['username'], $userPass['password'], Github\Client::AUTH_HTTP_PASSWORD);
-                $this->currentUser = $this->client->currentUser()->show();
+        try{
+
+            if ($this->checkForPassOrToken() && $client === 'default') {
+                $this->client = new \Github\Client;
+                if ($this->hasToken()) {
+                    $this->client->authenticate($this->getToken(), null, Github\Client::AUTH_HTTP_TOKEN);
+                    $this->currentUser = $this->client->currentUser()->show();
+                } elseif ($this->hasUserPass()) {
+                    $userPass = $this->getUserPass();
+                    $this->client->authenticate($userPass['username'], $userPass['password'], Github\Client::AUTH_HTTP_PASSWORD);
+                    $this->currentUser = $this->client->currentUser()->show();
+                }
+                if(!$this->client) {
+                    exit();
+                }
             }
-            if(!$this->client) {
-                exit();
-            }
-        }
+        }catch (Exception $exception){}
     }
 
     public function enqueue_styles()
