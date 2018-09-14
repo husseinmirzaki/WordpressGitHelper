@@ -113,11 +113,21 @@ class ComposerStaticInit6535e10261e748d37545da3fdab0e6f4
     );
 
     public static $classMap = array (
+        'ClientInterface' => __DIR__ . '/../..' . '/admin/ClientInterface.php',
+        'GitHubClient' => __DIR__ . '/../..' . '/admin/GitHubClient.php',
+        'LoginPart' => __DIR__ . '/../..' . '/admin/trait-login-part.php',
+        'MainPagePart' => __DIR__ . '/../..' . '/admin/MainPagePart.php',
         'Mirzaki' => __DIR__ . '/../..' . '/includes/class-mirzaki.php',
+        'MirzakiGitAuth' => __DIR__ . '/../..' . '/includes/class-mirzaki-git-auth.php',
         'Mirzaki_Activator' => __DIR__ . '/../..' . '/includes/class-mirzaki-activator.php',
+        'Mirzaki_Admin' => __DIR__ . '/../..' . '/admin/class-mirzaki-admin.php',
         'Mirzaki_Deactivator' => __DIR__ . '/../..' . '/includes/class-mirzaki-deactivator.php',
         'Mirzaki_Loader' => __DIR__ . '/../..' . '/includes/class-mirzaki-loader.php',
         'Mirzaki_i18n' => __DIR__ . '/../..' . '/includes/class-mirzaki-i18n.php',
+        'ShowBranchesPart' => __DIR__ . '/../..' . '/admin/ShowBranchesPart.php',
+        'ShowCommitPart' => __DIR__ . '/../..' . '/admin/ShowCommitPart.php',
+        'ShowCommitsPart' => __DIR__ . '/../..' . '/admin/ShowCommitsPart.php',
+        'ShowRepositoriesPart' => __DIR__ . '/../..' . '/admin/ShowRepositoriesPart.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

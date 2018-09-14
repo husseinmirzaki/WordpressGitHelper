@@ -6,9 +6,19 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ClientInterface' => $baseDir . '/admin/ClientInterface.php',
+    'GitHubClient' => $baseDir . '/admin/GitHubClient.php',
+    'LoginPart' => $baseDir . '/admin/trait-login-part.php',
+    'MainPagePart' => $baseDir . '/admin/MainPagePart.php',
     'Mirzaki' => $baseDir . '/includes/class-mirzaki.php',
+    'MirzakiGitAuth' => $baseDir . '/includes/class-mirzaki-git-auth.php',
     'Mirzaki_Activator' => $baseDir . '/includes/class-mirzaki-activator.php',
+    'Mirzaki_Admin' => $baseDir . '/admin/class-mirzaki-admin.php',
     'Mirzaki_Deactivator' => $baseDir . '/includes/class-mirzaki-deactivator.php',
     'Mirzaki_Loader' => $baseDir . '/includes/class-mirzaki-loader.php',
     'Mirzaki_i18n' => $baseDir . '/includes/class-mirzaki-i18n.php',
+    'ShowBranchesPart' => $baseDir . '/admin/ShowBranchesPart.php',
+    'ShowCommitPart' => $baseDir . '/admin/ShowCommitPart.php',
+    'ShowCommitsPart' => $baseDir . '/admin/ShowCommitsPart.php',
+    'ShowRepositoriesPart' => $baseDir . '/admin/ShowRepositoriesPart.php',
 );
