@@ -67,6 +67,8 @@ trait ShowRepositoriesPart
                 }
             }
 
+            header('location:'.substr($url, 0, stripos($url, '&pull')));
+
         } elseif (($rep = $this->getOptions($_GET, 'repository')) && ($bra = $this->getOptions($_GET, 'branch')) && ($com = $this->getOptions($_GET, 'commit')) && ($pull = $this->getOptions($_GET, 'pull'))) {
             set_time_limit(0);
             $option = self::COMMIT_OPTION . '_' . esc_attr($rep) . '_' . esc_attr($bra) . '_' . esc_attr($com);
@@ -117,6 +119,7 @@ trait ShowRepositoriesPart
 
                 }
             }
+            header('location:'.substr($url, 0, stripos($url, '&pull')));
         } elseif (($rep = $this->getOptions($_GET, 'repository')) && ($bra = $this->getOptions($_GET, 'branch')) && ($com = $this->getOptions($_GET, 'commit'))) {
             $option = self::COMMIT_OPTION . '_' . esc_attr($rep) . '_' . esc_attr($bra) . '_' . esc_attr($com);
             $commit = null;
