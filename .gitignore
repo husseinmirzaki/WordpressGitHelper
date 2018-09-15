@@ -37,3 +37,11 @@ dwsync.xml
 intermediate
 .idea
 cache
+
+vendor/*/test
+vendor/*/*/test
+vendor/*/*/*/test
+vendor/*/*/*/*/test
+vendor/*/*/*/*/*/test
+vendor/*/*/*/*/*/*/test
+vendor/*/*/*/*/*/*/*/test

@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       MirzakiGitHelper
  * Plugin URI:        https://github.com/husseinmirzaki/WordpressGitHelper
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin uses API v3 of github using CURL !!!
  * Version:           0.0.1
  * Author:            Seyed Hussein Mirzaki
  * Author URI:        http://husseinmirzaki.ir

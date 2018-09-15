@@ -19,5 +19,8 @@
             "email": "husseinmirzaki@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "optimize-autoloader": true,
+    "archive": {
+        "exclude": ["/vendor/*/test","/vendor/*/*/test","/vendor/*/*/*/test"]
+    }
 }
