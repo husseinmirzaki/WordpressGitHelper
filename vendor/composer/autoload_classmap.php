@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'ClientInterface' => $baseDir . '/admin/ClientInterface.php',
     'GitHubClient' => $baseDir . '/admin/GitHubClient.php',
-    'LoginPart' => $baseDir . '/admin/trait-login-part.php',
+    'LoginPart' => $baseDir . '/admin/LoginPart.php',
     'MainPagePart' => $baseDir . '/admin/MainPagePart.php',
     'Mirzaki' => $baseDir . '/includes/class-mirzaki.php',
     'MirzakiGitAuth' => $baseDir . '/includes/class-mirzaki-git-auth.php',
@@ -21,4 +21,5 @@ return array(
     'ShowCommitPart' => $baseDir . '/admin/ShowCommitPart.php',
     'ShowCommitsPart' => $baseDir . '/admin/ShowCommitsPart.php',
     'ShowRepositoriesPart' => $baseDir . '/admin/ShowRepositoriesPart.php',
+    'Utilities' => $baseDir . '/admin/Utilities.php',
 );

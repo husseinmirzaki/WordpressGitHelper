@@ -17,11 +17,11 @@ trait GitHubClient
 
 
     public function get($uri , $headers = []) {
-        return $this->getHttpClient()->get($uri , $headers);
+        return $this->getHttpClient()->get($uri , $headers)->getBody()->getContents();
     }
 
     public function post($uri , $headers = []) {
-        return $this->getHttpClient()->post($uri , $headers);
+        return $this->getHttpClient()->post($uri , $headers)->getBody()->getContents();
     }
 
     /**

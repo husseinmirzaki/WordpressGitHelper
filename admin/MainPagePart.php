@@ -10,8 +10,10 @@ trait MainPagePart
 {
 
 
+    public static $GIT_HELPER = 'GitHelper';
+
     public function setUpMainPageMenu()
     {
-        add_menu_page('GitHelper', 'GitHelper', 'manage_options', $this->menu_slugs[0], [$this, 'gitHelperMainPage']);
+        add_menu_page(self::$GIT_HELPER, self::$GIT_HELPER, 'manage_options', $this->menu_slugs[0], [$this, 'gitHelperMainPage']);
     }
 }

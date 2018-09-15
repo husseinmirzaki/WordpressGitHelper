@@ -36,6 +36,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'PLUGIN_NAME_VERSION', '0.0.1' );
+define( 'PLUGIN_DIR', __DIR__ );
 require_once __DIR__  .'/vendor/autoload.php';
 /**
  * The code that runs during plugin activation.

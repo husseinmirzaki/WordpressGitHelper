@@ -29,21 +29,53 @@ class Mirzaki_Admin
     use ShowBranchesPart;
     use ShowCommitsPart;
     use ShowCommitPart;
+    use Utilities;
 
-    public static $options_name = 'git_helper_options';
-    protected $menu_slugs = ['git_helper_main_page', 'git_helper_pull_sth'];
+    const REPOSITORIES_OPTION = 'git_helper_options_repositories';
+    const BRANCHES_OPTION = 'git_helper_options_branches';
+    const COMMITS_OPTION = 'git_helper_options_commits';
+    const COMMIT_OPTION = 'git_helper_options_commit';
+    const OPTIONS_NAME = 'git_helper_options';
+    const GIT_HELPER_USER_PASS_SECTION_PASSWORD = 'git_helper_user_pass_section_password';
+    const GIT_HELPER_TOKEN_SECTION_TOKEN = 'git_helper_token_section_token';
+    const GIT_HELPER_USER_PASS_SECTION_USERNAME = 'git_helper_user_pass_section_username';
+    const GIT_HELPER_DIR_TO_SAVE = 'git_helper_dir_to_save';
+    /**
+     * an array of all available options
+     * @var array
+     */
     protected $options;
-    protected $pullSthSlug = 'git_helper_pull_sth';
+
+    /**
+     * an array of created menu items
+     * @var array
+     */
+    protected $menu_slugs = ['git_helper_main_page', 'git_helper_pull_sth'];
+
+    /**
+     * plugin's name
+     * @var string
+     */
     private $plugin_name;
+
+    /**
+     * plugin's version
+     * @var string
+     */
     private $version;
+
+    /**
+     * plugin's name
+     * @var $currentUser \Github\Api\CurrentUser
+     */
     private $currentUser;
 
     public function __construct($plugin_name, $version, $client = 'default')
     {
         $this->plugin_name = $plugin_name;
         $this->version = $version;
-        $this->options = get_option(Mirzaki_Admin::$options_name);
-        try{
+        $this->options = get_option(self::OPTIONS_NAME);
+        try {
 
             if ($this->checkForPassOrToken() && $client === 'default') {
                 $this->client = new \Github\Client;
@@ -55,11 +87,12 @@ class Mirzaki_Admin
                     $this->client->authenticate($userPass['username'], $userPass['password'], Github\Client::AUTH_HTTP_PASSWORD);
                     $this->currentUser = $this->client->currentUser()->show();
                 }
-                if(!$this->client) {
+                if (!$this->client) {
                     exit();
                 }
             }
-        }catch (Exception $exception){}
+        } catch (Exception $exception) {
+        }
     }
 
     public function enqueue_styles()
