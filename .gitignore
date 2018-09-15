@@ -9,6 +9,7 @@
 *.vi
 *~
 *.sass-cache
+*.sass-cache
 
 # OS or Editor folders
 .DS_Store
@@ -80,3 +81,17 @@ cache
 /vendor/*/*/*/*/*/example
 /vendor/*/*/*/*/*/*/example
 /vendor/*/*/*/*/*/*/*/example
+/vendor/*/.git
+/vendor/*/*/.git
+/vendor/*/*/*/.git
+/vendor/*/*/*/*/.git
+/vendor/*/*/*/*/*/.git
+/vendor/*/*/*/*/*/*/.git
+/vendor/*/*/*/*/*/*/*/.git
+/vendor/*/.github
+/vendor/*/*/.github
+/vendor/*/*/*/.github
+/vendor/*/*/*/*/.github
+/vendor/*/*/*/*/*/.github
+/vendor/*/*/*/*/*/*/.github
+/vendor/*/*/*/*/*/*/*/.github
