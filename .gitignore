@@ -38,10 +38,10 @@ intermediate
 .idea
 cache
 
-vendor/*/tests
-vendor/*/*/tests
-vendor/*/*/*/tests
-vendor/*/*/*/*/tests
-vendor/*/*/*/*/*/tests
-vendor/*/*/*/*/*/*/tests
-vendor/*/*/*/*/*/*/*/tests
+vendor/*/tests/
+vendor/*/*/tests/
+vendor/*/*/*/tests/
+vendor/*/*/*/*/tests/
+vendor/*/*/*/*/*/tests/
+vendor/*/*/*/*/*/*/tests/
+vendor/*/*/*/*/*/*/*/tests/
